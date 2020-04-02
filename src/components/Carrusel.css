@@ -1,0 +1,7 @@
+.carrusel {
+width: 100%;
+}
+
+.carrusel > img {
+    width: 90%;
+}

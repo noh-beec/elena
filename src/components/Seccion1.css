@@ -1,0 +1,28 @@
+h1{
+    font-size: 70px;
+}
+
+.container{
+    display: flex;
+}
+
+.container > div {
+    margin: 10px;
+}
+
+.col1 {
+    flex: 4;
+}
+
+.col1  > h1{
+    margin-top: 7.5vh;
+    color: #313133;
+}
+
+.col1 > h2 {
+    color: #313133;
+}
+
+.col2 {
+    flex: 6;
+}
