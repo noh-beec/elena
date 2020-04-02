@@ -14,15 +14,20 @@ const Product = (props) => {
     }
     const crearHTML = datos => documentToHtmlString(datos)
     return (
-        <div>
-        <h3>{product.fields.title}</h3>
-        <img src={product.fields.imagenDestacada.fields.file.url} alt=""/>
-        <div
-                dangerouslySetInnerHTML={
-                    {__html:crearHTML(product.fields.content)}
-                }
-            >
-        </div>
+        <div style={{display: "flex"}}>
+            <div style={{width: "100%", textAlign: "center"}}>
+                <img style={{width: "50%"}} src={product.fields.imagenDestacada.fields.file.url} alt=""/>
+            </div>
+            <div style={{width: "100%"}}>
+                <h3>{product.fields.title}</h3>        
+                <div
+                        dangerouslySetInnerHTML={
+                            {__html:crearHTML(product.fields.content)}
+                        }
+                    >
+                </div>
+                <p style={{marginTop:"24px"}}>Precio: $ {product.fields.price}</p>
+            </div>
     </div>
     )               
 }
