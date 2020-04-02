@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 import Logo from './img/logo.svg';
 import Contacto from './img/contacto.svg';
@@ -15,9 +16,9 @@ const Header = () => {
             </div>
             <div id="user">
                 <ul>
-                    <li><img src={Home} alt=""/> Home</li>
+                    <li><img src={Home} alt=""/><Link className="header-link" to={'/'}>Home</Link></li>
                     <li><img src={Quienes} alt=""/> ¿Quienes somos?</li>
-                    <li><img src={Tienda} alt=""/> Tienda</li>
+                    <li><img src={Tienda} alt=""/><Link className="header-link" to={'/products'}>Tienda</Link></li>
                     <li><img src={Preguntas} alt=""/> FAQ</li>
                     <li><img src={Contacto} alt=""/> Contacto</li>
                 </ul>
