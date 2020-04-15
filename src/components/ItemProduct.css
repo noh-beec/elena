@@ -1,0 +1,13 @@
+.item-product-img{
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+    margin: 0 auto;
+    height: 196px;
+}
+
+.product{
+    text-align: center;
+    width: 25%;
+    margin: 24px;
+}
+

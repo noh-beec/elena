@@ -1,3 +1,51 @@
+.header {
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+}
+
+.navbar.solid {
+    background-color: #490d40;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solid .navbar-brand {
+    color: #c57ed3;
+    transition: color 1s ease 0s;
+}
+.navbar.solid .navbar-nav > li > a {
+    color: #c57ed3;
+    transition: color 1s ease 0s;
+}
+
+.image .heading {
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+.image p {
+    text-align: center;
+    padding: 20px 60px;
+}
+.image p .btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.image p .btn:hover {
+    color: #c57ed3;
+    border-color: #c57ed3;
+}
+
 nav{
     background: #3E3E3E;
     color: #fff;

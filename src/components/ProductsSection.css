@@ -1,0 +1,10 @@
+.container-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner-products{
+    background-color: black;
+    height: 320px;
+    width: 100%;
+}
