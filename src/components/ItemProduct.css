@@ -11,3 +11,11 @@
     margin: 24px;
 }
 
+.title {
+    font-weight: bold;
+    color: black;
+}
+
+.price {
+    color: #757575;
+}

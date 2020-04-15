@@ -5,7 +5,7 @@ import './ItemProduct.css';
 const ItemProduct = (props) => {
     return (
         <div className="product">
-          <Link to={'/product/' + props.llave}>
+          <Link to={'/product/' + props.llave} style={{textDecoration: "none"}}>
               <img className="item-product-img"  src={props.image} alt=""/>
               <div class="title">{props.name}</div>
               <span class="price">${props.price}</span>
