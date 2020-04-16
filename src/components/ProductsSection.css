@@ -1,11 +1,20 @@
 .container-products {
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .banner-products{
-    background-color: black;
     height: 320px;
     width: 100%;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.banner-products > h2 {
+    padding: 120px 0;
+    font-size: 5rem;
 }

@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 import {useContentfulData} from '../Hooks/useContenfulData';
 import ItemProduct from '../components/ItemProduct';
 import './ProductsSection.css';
+import Banner from './img/elenafondo2.png';
 
 const ProductsSection = (props) => {
 
@@ -18,8 +19,8 @@ const ProductsSection = (props) => {
 
     return (
         <>
-        <div class="banner-products">
-            <h3>Productos</h3>
+        <div class="banner-products" style={{backgroundImage: `url(${Banner})`}}>
+            <h2>Productos</h2>
         </div>
        <div className="container-products">
         {products.items.map( product =>{

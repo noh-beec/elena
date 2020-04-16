@@ -7,13 +7,15 @@
 
 .product{
     text-align: center;
-    width: 25%;
+    width: 250px;
     margin: 24px;
+    font-size: .9em;
 }
 
 .title {
     font-weight: bold;
     color: black;
+    margin-top: 24px;
 }
 
 .price {
