@@ -32,10 +32,10 @@ body{
 }
 .timeline h3{
     font-weight: lighter;
-    background: #2d9c96;
+    background: #490d40;
 }
 .timeline p, .timeline time {
-    color: #2d9c96
+    color: #490d40
 }
 .timeline::before {
     content: "";
@@ -44,7 +44,7 @@ body{
     top: 0;
     left: 50%;
     width: 0;
-    border-left: 2px dashed #2d9c96;
+    border-left: 2px dashed #490d40;
     height: 100%;
     z-index: 1;
     transform: translateX(-50%);
@@ -71,7 +71,7 @@ body{
     top: 5%;
     left: 100%;
     width: 0;
-    border-left: 10px solid #2d9c96;
+    border-left: 10px solid #490d40;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
@@ -81,7 +81,7 @@ body{
     top: 5%;
     right: 100%;
     width: 0;
-    border-right: 10px solid #2d9c96;
+    border-right: 10px solid #490d40;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
@@ -93,8 +93,7 @@ body{
     content: "";
     width: 80px;
     height: 80px;
-    border: 2px dashed #2d9c96;
-    border-radius: 50%;
+    
     display: block;
     position: absolute;
     top: 50%;
@@ -126,7 +125,7 @@ body{
         top: 0;
         left: 4%;
         width: 0;
-        border-left: 2px dashed #2d9c96;
+        border-left: 2px dashed #490d40;
         height: 100%;
         z-index: 1;
         transform: translateX(-50%);
@@ -151,7 +150,7 @@ body{
         right: 100%;
         width: 0;
         border-left: 0;
-        border-right: 10px solid #2d9c96;
+        border-right: 10px solid #490d40;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
     }
@@ -161,7 +160,7 @@ body{
         top: 5%;
         right: 100%;
         width: 0;
-        border-right: 10px solid #2d9c96;
+        border-right: 10px solid #490d40;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
     }
@@ -194,3 +193,12 @@ body{
 }
 
 
+.timeline-content li {
+    color: #490d40;
+    display: list-item;
+    padding: initial;
+}
+
+.timeline-content li::after{
+    color: #490d40;
+}

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {createClient} from 'contentful';
 
 const SPACE_ID = 'mrwt7flwaky4';

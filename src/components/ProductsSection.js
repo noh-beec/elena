@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect} from 'react';
 import {useContentfulData} from '../Hooks/useContenfulData';
 import ItemProduct from '../components/ItemProduct';
 import './ProductsSection.css';
@@ -19,10 +19,10 @@ const ProductsSection = (props) => {
 
     return (
         <>
-        <div class="banner-products" style={{backgroundImage: `url(${Banner})`}}>
-            <h2>Productos</h2>
+        <div className="banner-products" style={{backgroundImage: `url(${Banner})`}}>
+            <h2 className="animated infinite bounce delay-2s">Productos</h2>
         </div>
-       <div className="container-products">
+       <div id="products" className="container-products">
         {products.items.map( product =>{
                 console.log(product)
                 return(

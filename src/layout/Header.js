@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Header.scss';
 import Logo from './img/logo.svg';
 import Contacto from './img/contacto.svg';
@@ -16,6 +17,10 @@ class Header extends React.Component{
 
     state = {
         transparent: true
+    }
+
+    static propTypes = {
+        location: PropTypes.object.isRequired,
     }
 
     constructor(props) {
@@ -43,33 +48,61 @@ class Header extends React.Component{
         }
     }
 
-    render() {
-        return(
+    renderHome() {
+        return (    <>
+                <header id="home" className="header"  style={{backgroundImage: `url(${ImgFondo1})`}}>
+                    <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
+                        <Navbar.Brand href="#home"  className="logo"> <img src={Logo} alt=""/></Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto">
+                            </Nav>
+                            <Nav>
+                                <Nav.Link><img className="menu-img" src={Home} alt=""/> <Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Home</Link></Nav.Link>
+                                <Nav.Link><img className="menu-img" src={Quienes} alt=""/><Link smooth className="header-link" to="/#about" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> ¿Quienes somos?</Link></Nav.Link>
+                                <Nav.Link><img className="menu-img" src={Tienda} alt=""/><Link smooth className="header-link" to="/#products" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Tienda</Link></Nav.Link>
+                                <Nav.Link><img className="menu-img" src={Preguntas} alt=""/><Link smooth className="header-link" to="/#faq" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> FAQ</Link></Nav.Link>
+                                <Nav.Link><img className="menu-img" src={Contacto} alt=""/><Link smooth className="header-link" to="/#contact" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Contacto</Link></Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
+                    <div className="image">
+                        <h1 className="heading">Te damos la bienvenida a <br/><span>Elena Platería y Artesanías</span></h1>
+                        <PresentVideo></PresentVideo>
+                    </div>
+                </header>
+            </>
+        )
+    }
 
-            <>
-                <header className="header"  style={{backgroundImage: `url(${ImgFondo1})`}}>
+    renderOther(){
+        return (
+            <header id="home" className="header-other"  style={{backgroundImage: `url(${ImgFondo1})`}}>
                 <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
-                    <Navbar.Brand href="#home"  className="logo"> <img src={Logo} alt=""/></Navbar.Brand>
+                    <Navbar.Brand className="logo"><Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> <img src={Logo} alt=""/></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                         </Nav>
                         <Nav>
-                            <Nav.Link><img className="menu-img" src={Home} alt=""/> <Link className="header-link" to={{pathname:'/'}}>Home</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Quienes} alt=""/> ¿Quienes somos?</Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Tienda} alt=""/><Link className="header-link" to={{pathname:'/', hash:'#products',}}>Tienda</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Preguntas} alt=""/> FAQ</Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Contacto} alt=""/>Contacto</Nav.Link>
+                            <Nav.Link><img className="menu-img" src={Home} alt=""/> <Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Home</Link></Nav.Link>
+                            <Nav.Link><img className="menu-img" src={Quienes} alt=""/><Link smooth className="header-link" to="/#about" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> ¿Quienes somos?</Link></Nav.Link>
+                            <Nav.Link><img className="menu-img" src={Tienda} alt=""/><Link smooth className="header-link" to="/#products" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Tienda</Link></Nav.Link>
+                            <Nav.Link><img className="menu-img" src={Preguntas} alt=""/><Link smooth className="header-link" to="/#faq" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> FAQ</Link></Nav.Link>
+                            <Nav.Link><img className="menu-img" src={Contacto} alt=""/><Link smooth className="header-link" to="/#contact" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Contacto</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                        <div className="image">
-                            <h1 className="heading">Platería y Artesanía Elena</h1>
-                            <PresentVideo></PresentVideo>
-                        </div>
-                </header>
-            </>
-        )    
+            </header>
+        )
+    }
+
+
+    render() {
+        if (window.location.pathname === '/') {
+            return this.renderHome();
+        }
+        return this.renderOther();
     }
     
 }

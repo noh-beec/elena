@@ -11,6 +11,14 @@
     transition: background-color 1s ease 0s;
 }
 
+.header-other .navbar {
+    background-color: #490d40;
+}
+
+.header-other{
+    margin-bottom: 80px;
+}
+
 .navbar.solid {
     background-color: #490d40;
     transition: background-color 1s ease 0s;
@@ -28,8 +36,19 @@
 .image .heading {
     color: white;
     text-align: center;
-    padding-top: 400px;
+    padding-top:250px;
 }
+
+h1.heading{
+    text-shadow: 3px 5px 8px black;
+    font-size: 2rem;
+}
+
+h1.heading span {
+    font-size: 3.5rem;
+}
+
+
 .image p {
     text-align: center;
     padding: 20px 60px;
@@ -85,6 +104,14 @@ ul li {
 
 a.header-link:visited {
     color: white;
+}
+
+a.header-link {
+    color: white !important;
+}
+
+a.header-link:hover{
+    text-decoration: none;
 }
 
 .header-content {
