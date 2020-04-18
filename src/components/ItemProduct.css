@@ -21,3 +21,7 @@
 .price {
     color: #757575;
 }
+
+.product li {
+    display: list-item;
+}

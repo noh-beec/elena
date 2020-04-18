@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
+
 import './Header.scss';
 import Logo from './img/logo.svg';
 import Contacto from './img/contacto.svg';
@@ -12,15 +11,12 @@ import ImgFondo1 from  './img/elenafondo1.png';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import PresentVideo from "../components/PresentVideo";
+import NLink from '../components/NLink';
 
 class Header extends React.Component{
 
     state = {
         transparent: true
-    }
-
-    static propTypes = {
-        location: PropTypes.object.isRequired,
     }
 
     constructor(props) {
@@ -52,17 +48,17 @@ class Header extends React.Component{
         return (    <>
                 <header id="home" className="header"  style={{backgroundImage: `url(${ImgFondo1})`}}>
                     <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
-                        <Navbar.Brand href="#home"  className="logo"> <img src={Logo} alt=""/></Navbar.Brand>
+                        <Navbar.Brand href="#home"  className="logo"><img src={Logo} alt=""/></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
                             </Nav>
                             <Nav>
-                                <Nav.Link><img className="menu-img" src={Home} alt=""/> <Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Home</Link></Nav.Link>
-                                <Nav.Link><img className="menu-img" src={Quienes} alt=""/><Link smooth className="header-link" to="/#about" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> ¿Quienes somos?</Link></Nav.Link>
-                                <Nav.Link><img className="menu-img" src={Tienda} alt=""/><Link smooth className="header-link" to="/#products" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Tienda</Link></Nav.Link>
-                                <Nav.Link><img className="menu-img" src={Preguntas} alt=""/><Link smooth className="header-link" to="/#faq" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> FAQ</Link></Nav.Link>
-                                <Nav.Link><img className="menu-img" src={Contacto} alt=""/><Link smooth className="header-link" to="/#contact" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Contacto</Link></Nav.Link>
+                                <Nav.Link><NLink to={'/#home'} img={Home} text={'Inicio'}/></Nav.Link>
+                                <Nav.Link><NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/></Nav.Link>
+                                <Nav.Link><NLink to={'/#products'} img={Tienda} text={'Tienda'} /></Nav.Link>
+                                <Nav.Link><NLink to={'/#faq'} img={Preguntas} text={'FAQ'} /></Nav.Link>
+                                <Nav.Link><NLink to={'/#contact'} img={Contacto} text={'Contacto'} /></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
@@ -79,17 +75,17 @@ class Header extends React.Component{
         return (
             <header id="home" className="header-other"  style={{backgroundImage: `url(${ImgFondo1})`}}>
                 <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
-                    <Navbar.Brand className="logo"><Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> <img src={Logo} alt=""/></Link></Navbar.Brand>
+                    <Navbar.Brand href="#home"  className="logo"><img src={Logo} alt=""/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                         </Nav>
                         <Nav>
-                            <Nav.Link><img className="menu-img" src={Home} alt=""/> <Link className="header-link" to="/#home" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Home</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Quienes} alt=""/><Link smooth className="header-link" to="/#about" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> ¿Quienes somos?</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Tienda} alt=""/><Link smooth className="header-link" to="/#products" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Tienda</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Preguntas} alt=""/><Link smooth className="header-link" to="/#faq" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> FAQ</Link></Nav.Link>
-                            <Nav.Link><img className="menu-img" src={Contacto} alt=""/><Link smooth className="header-link" to="/#contact" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}> Contacto</Link></Nav.Link>
+                            <Nav.Link><NLink to={'/#home'} img={Home} text={'Inicio'}/></Nav.Link>
+                            <Nav.Link><NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/></Nav.Link>
+                            <Nav.Link><NLink to={'/#products'} img={Tienda} text={'Tienda'} /></Nav.Link>
+                            <Nav.Link><NLink to={'/#faq'} img={Preguntas} text={'FAQ'} /></Nav.Link>
+                            <Nav.Link><NLink to={'/#contact'} img={Contacto} text={'Contacto'} /></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
