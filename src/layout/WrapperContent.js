@@ -1,26 +1,19 @@
 import React from 'react';
 import Content from './Content.js';
+import {Route, Switch} from "react-router-dom";
+import Home from "../pages/Home";
 class WrapperContent extends React.Component{
     state = {
-        open: false
+        fullheader: true
     }
-    openMenu = () =>{
-        if(this.state.open === false){
-            this.setState({
-                open:true
-            })
-        }else{
-            this.setState({
-                open:false
-            })
-        }
-    }
+
     render = () =>{
         return(
             <>
-           
-            <Content abierto={this.state.open}>
-                {this.props.children}
+            <Content>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                </Switch>
             </Content>
             </>
         )

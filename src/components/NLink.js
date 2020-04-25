@@ -8,14 +8,15 @@ const NLink = (props) => {
 
     return (
         <>
-            <img  className={isHover ? 'menu-img animated pulse': 'menu-img'}
+            <Link className="header-link"
+                  style={{paddingRight: "16px"}}
+                  to={props.to}
                   onMouseEnter={() => setIsHover(true)}
-                  onMouseLeave={() => setIsHover(false)}  src={props.img} alt=""/><span> </span>
-                  <Link className="header-link"
-                        to={props.to}
-                        onMouseEnter={() => setIsHover(true)}
-                        onMouseLeave={() => setIsHover(false)}
-                        scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>{props.text}</Link>
+                  onMouseLeave={() => setIsHover(false)}
+                  scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
+            <img  className={isHover ? 'menu-img animated pulse': 'menu-img'}
+                  src={props.img} alt=""/><span> </span>
+                  {props.text}</Link>
         </>
     );
 };

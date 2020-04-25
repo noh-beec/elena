@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = (props) => {
     return (
        <>
-       <div class="footer">
+       <div className="footer">
        <h3>ELENA, platería y artesanías
            <br></br>
            Mercado de artesanías "La ciudadela"

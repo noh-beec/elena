@@ -25,7 +25,6 @@ const useContentfulData = (contentType) => {
 const useOneContentfulData = (id) => {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(true);
-    console.log(id)
     useEffect(()=>{
         client.getEntry(id.id)
         .then(entry => {

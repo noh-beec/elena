@@ -37,7 +37,6 @@ class Header extends React.Component{
                 transparent:false
             });
         } else {
-            console.log(window.scrollY);
             this.setState({
                 transparent:true
             });
@@ -54,11 +53,11 @@ class Header extends React.Component{
                             <Nav className="mr-auto">
                             </Nav>
                             <Nav>
-                                <Nav.Link><NLink to={'/#home'} img={Home} text={'Inicio'}/></Nav.Link>
-                                <Nav.Link><NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/></Nav.Link>
-                                <Nav.Link><NLink to={'/#products'} img={Tienda} text={'Tienda'} /></Nav.Link>
-                                <Nav.Link><NLink to={'/#faq'} img={Preguntas} text={'FAQ'} /></Nav.Link>
-                                <Nav.Link><NLink to={'/#contact'} img={Contacto} text={'Contacto'} /></Nav.Link>
+                                <NLink to={'/#home'} img={Home} text={'Inicio'}/>
+                                <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/>
+                                <NLink to={'/#products'} img={Tienda} text={'Tienda'} />
+                                <NLink to={'/#faq'} img={Preguntas} text={'FAQ'} />
+                                <NLink to={'/#contact'} img={Contacto} text={'Contacto'} />
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
@@ -81,11 +80,11 @@ class Header extends React.Component{
                         <Nav className="mr-auto">
                         </Nav>
                         <Nav>
-                            <Nav.Link><NLink to={'/#home'} img={Home} text={'Inicio'}/></Nav.Link>
-                            <Nav.Link><NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/></Nav.Link>
-                            <Nav.Link><NLink to={'/#products'} img={Tienda} text={'Tienda'} /></Nav.Link>
-                            <Nav.Link><NLink to={'/#faq'} img={Preguntas} text={'FAQ'} /></Nav.Link>
-                            <Nav.Link><NLink to={'/#contact'} img={Contacto} text={'Contacto'} /></Nav.Link>
+                            <NLink to={'/#home'} img={Home} text={'Inicio'}/>
+                            <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/>
+                            <NLink to={'/#products'} img={Tienda} text={'Tienda'} />
+                            <NLink to={'/#faq'} img={Preguntas} text={'FAQ'} />
+                            <NLink to={'/#contact'} img={Contacto} text={'Contacto'} />
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
