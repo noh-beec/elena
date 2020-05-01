@@ -21,7 +21,7 @@ const ItemProduct = (props) => {
                 <div className="title">{props.name}</div>
                 <span className="price">${props.price}</span>
             </button>
-            <Modal show={show} onHide={handleClose} size="lg" centered>
+            <Modal show={show} onHide={handleClose} size="lg" centered className="elena-modal-product">
                 <Modal.Body>
                     <Product product={props}/>
                 </Modal.Body>
