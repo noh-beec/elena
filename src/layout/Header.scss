@@ -36,7 +36,13 @@
 .image .heading {
     color: white;
     text-align: center;
-    padding-top:250px;
+    padding-top:80px;
+    
+}
+
+.image p{
+    text-shadow: 3px 5px 8px black;
+    color: white;
 }
 
 h1.heading{
@@ -56,7 +62,9 @@ h1.heading span {
 .image p .btn {
     background-color: transparent;
     color: white;
-    border: 1px solid white;
+    text-shadow: 3px 5px 8px black;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border: 3px solid white;
     padding: 10px;
     font-size: 1.2em;
 }

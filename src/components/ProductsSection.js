@@ -31,6 +31,7 @@ const ProductsSection = (props) => {
                                      image={product.fields.imagenDestacada.fields.file.url}
                                      price={product.fields.price}
                                      content={product.fields.content}
+                                     imageModal={product.fields.imagenProducto.fields.file.url}
                         />
                     )
                 })}
