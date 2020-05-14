@@ -14,7 +14,7 @@ const ContactSection = (props) => {
       <div  id="contatti">
                <div className="container mt-5">
 
-                   <div className="row" style={{"height":"550px"}}>
+                   <div className="row">
                        <div className="col-md-6 maps">
                            <iframe
                                 title={'mapa'}
