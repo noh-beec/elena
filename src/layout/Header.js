@@ -7,13 +7,13 @@ import Home from './img/home_Mesa de trabajo 1.svg';
 import Preguntas from './img/preguntas_Mesa de trabajo 1.svg';
 import Quienes from './img/quienes_Mesa de trabajo 1.svg';
 import Tienda from './img/tienda_Mesa de trabajo 1.svg';
-import ImgFondo1 from  './img/elenafondo1.png';
+import ImgFondo1 from './img/elenafondo1.png';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import PresentVideo from "../components/PresentVideo";
 import NLink from '../components/NLink';
 
-class Header extends React.Component{
+class Header extends React.Component {
 
     state = {
         transparent: true
@@ -32,60 +32,65 @@ class Header extends React.Component{
     }
 
     handleScroll(e) {
-        if(window.scrollY > 500) {
+        if (window.scrollY > 500) {
             this.setState({
-                transparent:false
+                transparent: false
             });
         } else {
             this.setState({
-                transparent:true
+                transparent: true
             });
         }
     }
 
     renderHome() {
-        return (    <>
-                <header id="home" className="header"  style={{backgroundImage: `url(${ImgFondo1})`}}>
-                    <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
-                        <Navbar.Brand href="#home"  className="logo"><img src={Logo} alt=""/></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto">
-                            </Nav>
-                            <Nav>
-                                <NLink to={'/#home'} img={Home} text={'Inicio'}/>
-                                <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/>
-                                <NLink to={'/#products'} img={Tienda} text={'Tienda'} />
-                                <NLink to={'/#faq'} img={Preguntas} text={'FAQ'} />
-                                <NLink to={'/#contact'} img={Contacto} text={'Contacto'} />
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
-                    <div class="col-md-6">
-                        <div className="image">
-                            <h1 className="heading"><br/><span>Elena Platería y Artesanías</span></h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
-                            <PresentVideo></PresentVideo>
-                        </div>
-                    </div>
-                    
-                </header>
-            </>
-        )
-    }
-
-    renderOther(){
-        return (
-            <header id="home" className="header-other"  style={{backgroundImage: `url(${ImgFondo1})`}}>
-                <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '': 'solid'}`}>
-                    <Navbar.Brand href="#home"  className="logo"><img src={Logo} alt=""/></Navbar.Brand>
+        return (<>
+            <header id="home" className="header" style={{ backgroundImage: `url(${ImgFondo1})` }}>
+                <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '' : 'solid'}`}>
+                    <Navbar.Brand href="#home" className="logo"><img src={Logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                         </Nav>
                         <Nav>
-                            <NLink to={'/#home'} img={Home} text={'Inicio'}/>
-                            <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'}/>
+                            <NLink to={'/#home'} img={Home} text={'Inicio'} />
+                            <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'} />
+                            <NLink to={'/#products'} img={Tienda} text={'Tienda'} />
+                            <NLink to={'/#faq'} img={Preguntas} text={'FAQ'} />
+                            <NLink to={'/#contact'} img={Contacto} text={'Contacto'} />
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+                <div className="col-md-6">
+                    <div className="image">
+                        <h1 className="heading"><span>Elena Platería y Artesanías</span></h1>
+                        <p>Somos una marca dedicada a la venta de artesanías y platería típica mexicanas.
+                            Elena tiene una tradición familiar en la venta de platería y artesanías, en alrededor
+                            de 50 años, su familia se ha dedicado a la distribución de estos objetos. 
+                            Elena busca transmitir y resaltar la cultura mexicana a todos los extranjeros que 
+                            esten interesados en conocer las artesanías mexicanas.
+                        </p>
+                        <PresentVideo></PresentVideo>
+                    </div>
+                </div>
+
+            </header>
+        </>
+        )
+    }
+
+    renderOther() {
+        return (
+            <header id="home" className="header-other" style={{ backgroundImage: `url(${ImgFondo1})` }}>
+                <Navbar expand="lg" fixed="top" className={` ${this.state.transparent ? '' : 'solid'}`}>
+                    <Navbar.Brand href="#home" className="logo"><img src={Logo} alt="" /></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto">
+                        </Nav>
+                        <Nav>
+                            <NLink to={'/#home'} img={Home} text={'Inicio'} />
+                            <NLink to={'/#about'} img={Quienes} text={'¿Quienes somos?'} />
                             <NLink to={'/#products'} img={Tienda} text={'Tienda'} />
                             <NLink to={'/#faq'} img={Preguntas} text={'FAQ'} />
                             <NLink to={'/#contact'} img={Contacto} text={'Contacto'} />
@@ -103,6 +108,6 @@ class Header extends React.Component{
         }
         return this.renderOther();
     }
-    
+
 }
 export default Header;

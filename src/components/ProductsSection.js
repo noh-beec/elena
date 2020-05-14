@@ -21,7 +21,7 @@ const ProductsSection = (props) => {
     return (
         <>
             <div className="banner-products" style={{backgroundImage: `url(${Banner})`}}>
-                <h2 className="animated infinite bounce delay-2s">Productos</h2>
+                <h2 className="animated infinite bounce delay-2s">Tienda</h2>
             </div>
             <div id="products" className="container-products">
                 {products.items.map(product => {

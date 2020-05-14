@@ -92,7 +92,7 @@ body{
 .timeline-image::before {
     content: "";
     width: 80px;
-    height: 80px;
+
     
     display: block;
     position: absolute;
@@ -169,7 +169,7 @@ body{
     }
     .timeline-image::before {
         width: 65px;
-        height: 65px;
+        
     }
 }
 
@@ -188,7 +188,6 @@ body{
     }
     .timeline-image::before {
         width: 60px;
-        height: 60px;
     }
 }
 

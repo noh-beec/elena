@@ -6,9 +6,9 @@ const FaqSection = (props) => {
     return (
        <>
          <div className="banner-products" style={{backgroundImage: `url(${Banner})`}}>
-            <h2 className="animated infinite bounce delay-2s">Preguntas Frecuentes</h2>
+            <h2 className="animated infinite bounce delay-2s">FAQ</h2>
         </div>
-       <div id="faq" class="faq" >
+       <div id="faq" className="faq" >
            <h3><b>Sobre nosotros</b></h3>
            <ul>
                <li><b>¿Quiénes somos?</b></li>
@@ -47,7 +47,7 @@ const FaqSection = (props) => {
            <br></br>
            <br></br>
         </div>
-        <div class="faq">
+        <div className="faq">
             <h3><b>Nuestros productos</b></h3>
            <ul>
                <li><b>¿Cómo adquirir nuestros productos?</b></li>

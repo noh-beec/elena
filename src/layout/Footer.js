@@ -5,8 +5,7 @@ const Footer = (props) => {
     return (
        <>
        <div className="footer">
-       <h3>Una parte de México en tus manos
-       </h3>
+
         <div className="details">
                 <div className="text">
                 <p><b>¿Qué hacemos?</b>
